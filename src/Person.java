@@ -1,50 +1,70 @@
+public class Person {
+    private String name;
 
-// Textual representation how an object will look in the memory
-// Whatever we write in class is in actual the property of object as describing the object
-// If you want anything which should belong to class, make it static.
-
-class Person {
-
-// Attributes (State)
-    String name;
-    String lastName;
-
-// Constructor
-    Person(){
-        System.out.println("Hello...");
+    public Person(String name) {
+        this.name = name;
     }
 
-// Methods (Behavior)
-// To write data in Product Object we have this method
-
-    public String getName(){
-        return String.format(name + lastName);
+    public String getName() {
+        return name;
     }
 
-    public void setName(String firstName, String lastName){
-        this.name = "John";
-        this.lastName = "Doe";
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String sayHello() {
-        return String.format("Hello %s %s", name, lastName);
+    public void sayHello() {
+        System.out.printf("Hello, I'm %s.%n", name);
     }
 
-// To read data from Product Object
-    void showProductDetails(){
-        System.out.println("Person...");
-    }
+    public static void main(String[] args) {
 
-
-        public static void main(String[] args) {
-            // object creation
-            Person person1 = new Person();
-            Person person2 = person1;
-            System.out.println(person1.getName());
-            System.out.println(person2.getName());
-            System.out.println(person1.getName());
-            System.out.println(person2.getName());
-
+        // test person methods
+        String testName = "James";
+        Person person = new Person(testName);
+        if (person.getName().equals(testName)) {
+            person.sayHello();
+        } else {
+            System.out.println("name mis-match");
         }
+
+        testName = "Mary";
+        person.setName(testName);
+        if (person.getName().equals(testName)) {
+            person.sayHello();
+        } else {
+            System.out.println("name mis-match");
+        }
+
+        // EX 2: understanding references
+        demoExercise02();
     }
 
+    /**
+     * Understanding references
+     *
+     * The following code blocks make use of the Person class from the previous exercise.
+     * For each code block, think about what the code will output, then copy the code into
+     * IntelliJ and run it to see if it matches your expectations.
+     */
+    private static void demoExercise02() {
+
+        // EX 2: understanding references
+        Person person1 = new Person("John");
+        Person person2 = new Person("John");
+        System.out.println(person1.getName().equals(person2.getName())); // should be true
+        System.out.println(person1 == person2);                          // Should be false
+
+        person1 = new Person("John");
+        person2 = person1;
+        System.out.println(person1 == person2); // should be true
+
+        person1 = new Person("John");
+        person2 = person1;
+        System.out.println(person1.getName()); // John
+        System.out.println(person2.getName()); // John
+        person2.setName("Jane");
+        System.out.println(person1.getName()); // Jane
+        System.out.println(person2.getName()); // Jane
+    }
+}
