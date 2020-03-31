@@ -1,3 +1,5 @@
+package shapes;
+
 public class Circle {
 
     private double radius;
@@ -11,7 +13,7 @@ public class Circle {
     }
 
     public String describeData() {
-        StringBuilder sb = new StringBuilder("Circle data: \n");
+        StringBuilder sb = new StringBuilder("shapes.Circle data: \n");
         sb.append(String.format("\tRadius: %.3f\n", radius));
         sb.append(String.format("\tCircumference: %.3f\n", radius));
         sb.append(String.format("\tArea: %.3f\n", getArea()));
