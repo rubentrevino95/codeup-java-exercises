@@ -14,18 +14,7 @@ public class Input {
         scanner = s;
     }
 
-    /**
-     * Create a method that validates that user input is in a certain range
-     *
-     * The method signature should look like this:
-     * public static String getString();
-     *
-     * and is used like this:
-     * String userInput = getString();
-     *
-     * @param prompt A prompt for the user (optional)
-     * @return the String entered by the user
-     */
+
     public static String getString(String prompt) throws Exception {
         if (scanner == null) {
             throw new Exception("Input Utility's scanner is not set");
@@ -40,27 +29,12 @@ public class Input {
         return s;
     }
 
-    /**
-     * Secondary method for no prompt.
-     *
-     * @return
-     */
+
     public static String getString() throws Exception {
         return getString(null);
     }
 
-    /**
-     * Create a method that ask the user to enter yes or no.
-     * <p>
-     * The method signature should look like this:
-     * public static boolean yesNo();
-     * <p>
-     * and is used like this:
-     * boolean userInput = yesNo();
-     *
-     * @param prompt A prompt for the user (optional)
-     * @return the boolean corresponding to the user entry
-     */
+
     public static boolean yesNo(String prompt) throws Exception {
         if (scanner == null) {
             throw new Exception("Input Utility's scanner is not set");
@@ -75,27 +49,12 @@ public class Input {
         return response;
     }
 
-    /**
-     * Secondary method for no prompt.
-     *
-     * @return
-     */
+
     public static boolean yesNo() throws Exception {
         return yesNo(null);
     }
 
-    /**
-     * Create a method that validates that user input is in a certain range
-     * <p>
-     * The method signature should look like this:
-     * public static int getInt();
-     * <p>
-     * and is used like this:
-     * int userInput = getInt();
-     *
-     * @param prompt A prompt for the user (optional)
-     * @return the number entered by the user
-     */
+
     public static int getInt(String prompt) throws Exception {
         if (scanner == null) {
             throw new Exception("Input Utility's scanner is not set");
@@ -124,29 +83,12 @@ public class Input {
         return num;
     }
 
-    /**
-     * Secondary method for no prompt.
-     *
-     * @return
-     */
+
     public static int getInt() throws Exception {
         return getInt(null);
     }
 
-    /**
-     * Create a method that validates that user input is in a certain range
-     * <p>
-     * The method signature should look like this:
-     * public static int getInt(int min, int max);
-     * <p>
-     * and is used like this:
-     * int userInput = getInt(1, 10);
-     *
-     * @param min
-     * @param max
-     * @param prompt A prompt for the user (optional)
-     * @return the number entered by the user
-     */
+
     public static int getInt(int min, int max, String prompt) throws Exception {
         if (scanner == null) {
             throw new Exception("Input Utility's scanner is not set");
@@ -179,29 +121,12 @@ public class Input {
         return num;
     }
 
-    /**
-     * Secondary method for no prompt.
-     *
-     * @param min
-     * @param max
-     * @return
-     */
+
     public static int getInt(int min, int max) throws Exception {
         return getInt(min, max, null);
     }
 
-    /**
-     * Create a method that validates that user input is in a certain range
-     * <p>
-     * The method signature should look like this:
-     * public static double getDouble();
-     * <p>
-     * and is used like this:
-     * double userInput = getDouble();
-     *
-     * @param prompt A prompt for the user (optional)
-     * @return the number entered by the user
-     */
+
     public static double getDouble(String prompt) throws Exception {
         if (scanner == null) {
             throw new Exception("Input Utility's scanner is not set");
@@ -228,29 +153,12 @@ public class Input {
         return num;
     }
 
-    /**
-     * Secondary method for no prompt.
-     *
-     * @return
-     */
+
     public static double getDouble() throws Exception {
         return getDouble(null);
     }
 
-    /**
-     * Create a method that validates that user input is in a certain range
-     * <p>
-     * The method signature should look like this:
-     * public static double getDouble(double min, double max);
-     * <p>
-     * and is used like this:
-     * double userInput = getDouble(1, 10);
-     *
-     * @param min
-     * @param max
-     * @param prompt A prompt for the user (optional)
-     * @return the number entered by the user
-     */
+
     public static double getDouble(double min, double max, String prompt) throws Exception {
         if (scanner == null) {
             throw new Exception("Input Utility's scanner is not set");
@@ -283,14 +191,10 @@ public class Input {
         return num;
     }
 
-    /**
-     * Secondary method for no prompt.
-     *
-     * @param min
-     * @param max
-     * @return
-     */
+
     public static double getDouble(double min, double max) throws Exception {
         return getDouble(min, max, null);
     }
+
+
 }
