@@ -37,21 +37,15 @@ public class Person {
         }
 
         // EX 2: understanding references
-        demoExercise02();
+        Exercise02();
     }
 
-    /**
-     * Understanding references
-     *
-     * The following code blocks make use of the Person class from the previous exercise.
-     * For each code block, think about what the code will output, then copy the code into
-     * IntelliJ and run it to see if it matches your expectations.
-     */
-    private static void demoExercise02() {
+
+    private static void Exercise02() {
 
         // EX 2: understanding references
         Person person1 = new Person("John");
-        Person person2 = new Person("John");
+        Person person2 = new Person("Jane");
         System.out.println(person1.getName().equals(person2.getName())); // should be true
         System.out.println(person1 == person2);                          // Should be false
 

@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class serverNameGenerator {
+public class ServerNameGenerator {
 
     public static String[] adjectives = {"funny", "prompt", "amazing"};
     public static String[] nouns = {"desk", "guitar", "house"};

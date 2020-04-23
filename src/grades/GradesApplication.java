@@ -10,10 +10,10 @@ public class GradesApplication {
     public static void main(String[] args) throws Exception {
         HashMap<String, Student> Students = new HashMap<>();
 
-        Students.put("Ruben", new Student("Strife"));
-        Students.put("Daniel", new Student("Caelum"));
-        Students.put("Marlene", new Student("name"));
-        Students.put("Fredo", new Student("Larry"));
+        Students.put("Cloud", new Student("Strife"));
+        Students.put("Noctis", new Student("Caelum"));
+        Students.put("Lightning", new Student("lastname"));
+        Students.put("Tidus", new Student("lastname"));
 
         Random random = new Random();
         for (int i=0; i< 4; i++){

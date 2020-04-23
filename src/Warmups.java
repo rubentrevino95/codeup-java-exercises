@@ -1,4 +1,6 @@
 public class Warmups {
+
+
     public static int[] numberList = new int[]{10, 15, 3 ,7};
     public static int k = 17;
 
@@ -16,4 +18,6 @@ public class Warmups {
         }
         return false;
     }
+
 }
+
